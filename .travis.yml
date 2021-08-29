@@ -15,6 +15,26 @@ matrix:
       env:
         - MATRIX_EVAL="CC=gcc-9 && CXX=g++-9"
 
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-10
+      env:
+        - MATRIX_EVAL="CC=gcc-10 && CXX=g++-10"
+
+    - compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-11
+      env:
+        - MATRIX_EVAL="CC=gcc-11 && CXX=g++-11"
+
     - compiler: clang
       addons:
         apt:
@@ -26,6 +46,30 @@ matrix:
             - libstdc++-8-dev
       env:
         - MATRIX_EVAL="CC=clang-8 && CXX=clang++-8"
+
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-bionic-9
+          packages:
+            - clang-9
+            - libstdc++-9-dev
+      env:
+        - MATRIX_EVAL="CC=clang-9 && CXX=clang++-9"
+
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-bionic-10
+          packages:
+            - clang-10
+            - libstdc++-10-dev
+      env:
+        - MATRIX_EVAL="CC=clang-10 && CXX=clang++-10"
 
 before_install:
   - PARENTDIR=$(pwd)
