@@ -1,3 +1,3 @@
 #!/bin/bash
 cd $(dirname $0)
-git clone git@github.com:nlohmann/json.git
+git clone https://github.com/nlohmann/json.git
