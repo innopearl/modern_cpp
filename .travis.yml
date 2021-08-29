@@ -30,6 +30,6 @@ install:
 
 # command to run tests
 script:
-  - $PARENTDIR/build/test_json
+  #- $PARENTDIR/build/test_json
  
 
