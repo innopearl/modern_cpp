@@ -21,7 +21,9 @@ before_install:
   - mkdir $PARENTDIR/build
 
 install: 
-  - bash -x $PARENTDIR/dependencies/checkout.sh
+  #- bash -x $PARENTDIR/dependencies/checkout.sh
+  - cd $PARENTDIR/dependencies
+  - git clone https://${CI_USER_TOKEN}@github.com/nlohmann/json.git
   - cd $PARENTDIR/build
   - cmake $PARENTDIR
   - make
