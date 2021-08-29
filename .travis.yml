@@ -17,6 +17,7 @@ addons:
 
 
 before_install:
+  - $PARENTDIR/dependencies/checkout.sh
   - PARENTDIR=$(pwd)
   - mkdir $PARENTDIR/build
 
