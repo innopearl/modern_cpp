@@ -1,0 +1,31 @@
+#https://docs.travis-ci.com/user/languages/cpp/
+language: cpp
+dist: xenial
+notifications:
+  email: false
+
+compiler:
+  - clang
+  - gcc
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake-data
+      - cmake
+
+
+before_install:
+  - PARENTDIR=$(pwd)
+  - mkdir $PARENTDIR/build
+
+install: 
+  - cd $PARENTDIR/build
+  - cmake $PARENTDIR
+  - make
+
+# command to run tests
+script:
+  - $PARENTDIR/build 
+

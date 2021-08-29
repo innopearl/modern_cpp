@@ -3,7 +3,7 @@
 
 //#define JSON_THROW(exception) throw exception
 
-#include "json/src/json.hpp"
+#include "nlohmann/json.hpp"
 #include <fstream>
 #include <iostream>
 #include <math.h>
