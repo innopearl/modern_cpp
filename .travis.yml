@@ -21,7 +21,7 @@ before_install:
   - mkdir $PARENTDIR/build
 
 install: 
-  - $PARENTDIR/dependencies/checkout.sh
+  - bash -x $PARENTDIR/dependencies/checkout.sh
   - cd $PARENTDIR/build
   - cmake $PARENTDIR
   - make
