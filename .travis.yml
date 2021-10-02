@@ -49,7 +49,7 @@ deploy:
   keep_history: true
   target_branch: autogen
   on:
-    branch: main
+    branch: master
     
 # command to run tests
 script:
