@@ -49,6 +49,7 @@ deploy:
   keep_history: true
   target_branch: autogen
   committer_from_gh: true
+  name: innopearl
   on:
     branch: master
     
