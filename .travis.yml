@@ -30,6 +30,8 @@ matrix:
 before_install:
   - PARENTDIR=$(pwd)
   - mkdir $PARENTDIR/build
+  - mkdir $PARENTDIR/autogen
+  - date +%Y-%m-%d-%H:%M:%S > $PARENTDIR/autogen/buildinfo.txt
 
 install: 
   #- bash -x $PARENTDIR/dependencies/checkout.sh
@@ -37,8 +39,18 @@ install:
   - git clone https://${CI_USER_TOKEN}@github.com/nlohmann/json.git
   - cd $PARENTDIR/build
   - cmake $PARENTDIR
-  - make
-
+  - time make >> $PARENTDIR/autogen/buildinfo.txt
+  
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: autogen
+  github_token: ${GITREPO_TOKEN} # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  target_branch: autogen
+  on:
+    branch: main
+    
 # command to run tests
 script:
   #- $PARENTDIR/build/test_json
