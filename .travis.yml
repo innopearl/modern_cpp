@@ -40,8 +40,6 @@ install:
   - cd $PARENTDIR/build
   - cmake $PARENTDIR
   - time make >> $PARENTDIR/autogen/buildinfo.txt
-  - echo $GITREPO_TOKEN
-  - export GITREPO_TOKEN=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
   
 deploy:
   provider: pages
