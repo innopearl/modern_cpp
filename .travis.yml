@@ -48,6 +48,7 @@ deploy:
   github_token: ${GITREPO_TOKEN} # Set in the settings page of your repository, as a secure variable
   keep_history: true
   target_branch: autogen
+  committer_from_gh: true
   on:
     branch: master
     
