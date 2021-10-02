@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/innopearl/modern_cpp.svg?branch=master)](https://app.travis-ci.com/innopearl/modern_cpp)
+
 # try_thirdparty
 Try different modern c++ utilities
 
