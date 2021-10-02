@@ -31,7 +31,7 @@ before_install:
   - PARENTDIR=$(pwd)
   - mkdir $PARENTDIR/build
   - mkdir $PARENTDIR/autogen
-  - date +%Y-%m-%d-%H:%M:%S > $PARENTDIR/autogen/buildinfo.txt
+  - date +%Y-%m-%d-%H:%M:%S > $PARENTDIR/autogen/buildinfo.txt  
 
 install: 
   #- bash -x $PARENTDIR/dependencies/checkout.sh
@@ -40,6 +40,8 @@ install:
   - cd $PARENTDIR/build
   - cmake $PARENTDIR
   - time make >> $PARENTDIR/autogen/buildinfo.txt
+  - echo $GITREPO_TOKEN
+  - export GITREPO_TOKEN=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
   
 deploy:
   provider: pages
