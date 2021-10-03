@@ -44,7 +44,6 @@ install:
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: autogen
   github_token: ${GITREPO_TOKEN} # Set in the settings page of your repository, as a secure variable
   keep_history: true
   target_branch: autogen
