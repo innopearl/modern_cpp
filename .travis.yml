@@ -53,7 +53,7 @@ install:
 #    branch: master
 
 after_success: |
-  if [ -n "$GITREPO_TOKEN" ]; then
+  if [ -n "$GITREPO_TOKEN" -a "x$TRAVIS_BRANCH" = "xmaster" ]; then
     cd $PARENTDIR
     git checkout -b autogen
     git add autogen
