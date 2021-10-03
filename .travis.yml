@@ -29,8 +29,8 @@ matrix:
 
 before_install:
   - PARENTDIR=$(pwd)
-  - mkdir $PARENTDIR/build
-  - mkdir $PARENTDIR/autogen
+  - mkdir -p $PARENTDIR/build
+  - mkdir -p $PARENTDIR/autogen
   - date +%Y-%m-%d-%H:%M:%S > $PARENTDIR/autogen/buildinfo.txt  
 
 install: 
