@@ -15,3 +15,5 @@ Try different modern c++ utilities
 
 # Misc
 https://godbolt.org/z/5jaMn19G3
+
+https://godbolt.ong/z/rM6d6do7P
