@@ -13,3 +13,5 @@ Try different modern c++ utilities
 | cmake | https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html | |
 | ninja | | | 
 
+# Misc
+https://godbolt.org/z/5jaMn19G3
